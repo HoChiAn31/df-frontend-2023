@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Bookstore</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    Hello world
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Bookstore</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="header_title">
+        <h1 class="header_title-name">Bookstore</h1>
+      </div>
+      <div class="header_user">
+        <img class="header_user-img"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTutnFzejkJRAmwqDcir1a1g2civHLjUQxi-0HbwTh_XIZY2jfuaeo73wXKRJ75_6vvXD0&usqp=CAU"
+          alt="user"></img>
+        <div class="header_user-name">Ann An</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content_nav">
+        <input id="searchInput" type="text" class="input" placeholder="Search books">
+        <button onclick={showModalAdd()} class="button btn-add">Add book</button>
+      </div>
+
+      <div class="content_table">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Topic</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="jsTable"></tbody>
+      </div>
+    </div>
+    <!-- Modal Add -->
+    <div id="js-modal-add" class="modal-add modal">
+      <div class="add-container modal-container">
+        <div class="add_header modal-header">
+          <p class="add_header-title">Add book</p>
+          <p onclick={hideModalAdd()} class=" add_header-close">&times;</p>
+        </div>
+        <div class="add_content">
+          <div class="add_content-item">
+            <p class="add_content-name">Name</p>
+            <input type="text" class="js-input-name input add_content-input">
+          </div>
+          <div class="add_content-item">
+            <p class="add_content-name">Author</p>
+            <input type="text" class="js-input-author input add_content-input">
+          </div>
+          <div class="add_content-item">
+            <p class="add_content-name">Topic</p>
+            <select class="js-input-topic add_content-topic">
+              <option value="Programing">Programing</option>
+              <option value="Database">Database</option>
+              <option value="DevOps">DevOps</option>
+            </select>
+          </div>
+        </div>
+        <div class="add_button">
+          <button class="button add-btn js-add-btn" onclick={handleAddBook()}>Create</button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Delete -->
+    <div id="js-modal-delete" class=" modal-delete modal"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
