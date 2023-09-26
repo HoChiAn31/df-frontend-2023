@@ -1,0 +1,120 @@
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    background-color: #fff;
+    min-width: 300px;
+    max-width: calc(100% - 32px);
+    min-height: 100px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+//Modal Add
+.header-add {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 2rem;
+    align-items: center;
+}
+.title-name {
+    color: var(--black-color);
+}
+.close-add {
+    cursor: pointer;
+    font-size: 2.4rem;
+    color: var(--black-color);
+}
+.content-add {
+}
+.content-item {
+    margin-top: 16px;
+}
+.content-name {
+    font-size: 1.2rem;
+}
+.content-input {
+    margin: 0;
+    width: 100%;
+    height: 34px;
+}
+
+.content-topic {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #d9dfe5;
+    border-radius: 4px;
+}
+.add-button {
+    margin: 24px 0 12px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.add-btn {
+    padding: 10px 24px;
+}
+//Modal Delete
+.header-delete {
+    position: relative;
+    color: var(--black-color);
+}
+.title-delete {
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.close-delete {
+    position: absolute;
+    top: -2px;
+    right: -6px;
+    font-size: 2.6rem;
+    cursor: pointer;
+    color: var(--black-color);
+}
+.delete-content {
+    text-align: center;
+    margin: 24px 0;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: var(--black-color);
+}
+.delete-content-text {
+    font-size: 1.8rem;
+}
+.delete-content-title {
+    font-weight: bold;
+}
+.delete-button {
+    display: flex;
+    justify-content: center;
+}
+.delete-button-item {
+    padding: 14px 28px;
+    margin: 0 8px;
+}
+.delete-button-item:first-child {
+    background-color: transparent;
+    color: var(--black-color);
+}

@@ -1,0 +1,30 @@
+:root {
+    --text-color: #54606a;
+    --white-color: #fff;
+    --black-color: #000;
+    --dark-color: #242526;
+    --primary-color: #d3455a;
+
+    --font-family: 'Roboto', sans-serif;
+
+    --height-header: 56px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: var(--font-family);
+    text-rendering: optimizeSpeed;
+}
+button,
+input {
+    outline: none;
+    border: none;
+}
+a {
+    text-decoration: none;
+}
