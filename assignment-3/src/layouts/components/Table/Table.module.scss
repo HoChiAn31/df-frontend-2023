@@ -1,0 +1,28 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td,
+.table th {
+    border: 2px solid #c7d3dc;
+    padding: 8px;
+    font-size: 1.4rem;
+}
+
+.table th {
+    text-align: left;
+    font-weight: bold;
+}
+
+.table th:first-child {
+    width: 35%;
+}
+.action {
+    color: var(--primary-color);
+    text-decoration: underline;
+    &:hover {
+        cursor: pointer;
+        color: #d3455ab5;
+    }
+}

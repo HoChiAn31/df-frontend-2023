@@ -1,10 +1,16 @@
+import React, { FC } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import Input from '../../../components/Input/Input';
 import { useTheme } from '../../../components/ThemeProvider/ThemeProvider';
+
 const cx = classNames.bind(styles);
-function Header() {
+
+interface HeaderProps {}
+
+const Header: FC<HeaderProps> = () => {
     const { theme, toggleTheme } = useTheme();
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('title')}>
@@ -17,15 +23,15 @@ function Header() {
                     alt="user"
                 />
                 <div className={cx('user-name')}>Ann An</div>
-                <label className={cx('change-theme')}>
+                <label htmlFor="themeToggle" className={cx('change-theme')}>
                     <Input
+                        id="themeToggle" 
                         className={cx('btn-theme')}
                         checkbox
                         type="checkbox"
                         checked={theme}
-                        // onClick={onClick}
                         onChange={toggleTheme}
-                    ></Input>
+                    />
                 </label>
             </div>
         </div>

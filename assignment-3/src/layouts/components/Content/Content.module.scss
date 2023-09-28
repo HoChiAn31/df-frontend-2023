@@ -1,0 +1,29 @@
+.wrapper {
+    margin: 12px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.table {
+    margin-top: 16px;
+}
+.modal {
+    display: none;
+}
+// .paginate {
+//     list-style: none;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+// }
+// .page {
+//     padding: 10px;
+//     cursor: pointer;
+// }
+// .active {
+//     background-color: var(--primary-color);
+//     border-radius: 50%;
+//     padding: 10px;
+//     font-size: 1.2rem;
+// }

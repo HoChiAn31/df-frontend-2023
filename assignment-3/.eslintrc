@@ -19,7 +19,14 @@
     "createDefaultProgram": true,
     "sourceType": "module"
   },
-  "rules": {},
+  "rules": {
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "import/no-duplicates": "off",
+    "import/order": "off"
+  },
   "overrides": [
     {
       "files": ["**/*.ts?(x)", "**/*.js?(x)"],
@@ -28,6 +35,28 @@
         "react/jsx-sort-props": "off",
         "react/function-component-definition": "off",
         "no-shadow": "off"
+      }
+    },
+    {
+      "files": ["src/components/ThemeProvider/ThemeProvider.tsx"], 
+      "rules": {
+        "react/jsx-no-constructed-context-values": "off"
+      }
+    },
+    {
+      "files": ["src/components/Modal/components/ModalAdd.tsx"],
+      "rules": {
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off"
+      }
+    },
+    {
+      "files": ["src/components/Modal/components/ModalDelete.tsx"],
+      "rules": {
+        "import/no-duplicates": "off",
+        "import/order": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off"
       }
     }
   ]

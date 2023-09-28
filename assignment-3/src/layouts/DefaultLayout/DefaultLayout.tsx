@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import React, { FC } from 'react';
 
 import styles from './DefaultLayout.module.scss';
 import Header from '../components/Header/Header';
@@ -7,7 +8,7 @@ import { useTheme } from '../../components/ThemeProvider/ThemeProvider';
 
 const cx = classNames.bind(styles);
 
-function DefaultLayout() {
+const DefaultLayout: FC = () => {
     const { theme } = useTheme();
     return (
         <div className={cx('wrapper', theme ? 'dark' : 'light')}>
